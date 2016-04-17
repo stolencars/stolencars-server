@@ -1,0 +1,42 @@
+{
+  "name": "stolencars-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "lint": "node_modules/eslint/bin/eslint.js .",
+    "lint:fix": "node_modules/eslint/bin/eslint.js . --fix",
+    "pretest": "npm run lint",
+    "test": "NODE_ENV=test node_modules/.bin/mocha --recursive --reporter spec --timeout 5000 spec",
+    "dev": "NODE_ENV=development nodemon server.js"
+  },
+  "author": "Tomas Dvorak <todvora@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "boom": "^3.1.2",
+    "easyxml": "^2.0.1",
+    "gm": "^1.21.1",
+    "hapi": "^13.0.0",
+    "hapi-auth-jwt2": "^5.4.1",
+    "hapi-mongodb": "^6.0.0",
+    "hapi-swagger": "^4.2.1",
+    "inert": "^3.2.0",
+    "joi": "^8.0.3",
+    "js-yaml": "^3.5.5",
+    "jsonwebtoken": "^5.7.0",
+    "lodash": "^4.5.1",
+    "mongodb": "^2.1.13",
+    "node-uuid": "^1.4.7",
+    "policecz-vehicles-client": "^1.0.0",
+    "q": "^1.4.1",
+    "vision": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^2.2.0",
+    "mocha": "2.3.4",
+    "nodemon": "*",
+    "supertest": "^1.2.0",
+    "supertest-as-promised": "^3.0.0"
+  }
+}
